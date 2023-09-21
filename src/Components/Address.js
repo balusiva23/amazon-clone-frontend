@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { useStateValue } from "../StateProvider";
 import Navbar from "./Navbar";
 function Address() {
-  const [{}, dispatch] = useStateValue();
+  //const [{}, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue(); // Updated line 7
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [flat, setFlat] = useState("");

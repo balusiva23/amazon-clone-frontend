@@ -27,7 +27,7 @@ function Payment() {
 
     fetchClientSecret();
     console.log("clientSecret is >>>>", clientSecret);
-    }, [clientSecret,basket]);
+    }, [clientSecret,basket]); //new
 
   const confirmPayment = async (e) => {
     e.preventDefault();
