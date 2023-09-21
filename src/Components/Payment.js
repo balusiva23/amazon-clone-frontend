@@ -3,7 +3,7 @@ import CurrencyFormat from "react-currency-format";
 import styled from "styled-components";
 import { getBasketTotal } from "../reducer";
 import { useStateValue } from "../StateProvider";
-import Address from "./Address";
+//import Address from "./Address";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import Navbar from "./Navbar";
 import axios from "../axios";

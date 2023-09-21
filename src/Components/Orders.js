@@ -19,7 +19,7 @@ function Orders() {
 
   const [{ user }] = useStateValue();
   const [orders, setOrders] = useState([]);
-  const [error, setError] = useState(null);
+
   useEffect(() => {
     // Ensure user is logged in before fetching orders
     if (user && user.email) {
@@ -27,10 +27,10 @@ function Orders() {
         .post("/orders/get", { email: user.email })
         .then((res) => {
           setOrders(res.data);
-          setError(null); // Clear any previous errors
+  
         })
         .catch((error) => {
-          setError("Error fetching orders. Please try again later.");
+        
           console.error("Error fetching orders:", error);
         });
     }
