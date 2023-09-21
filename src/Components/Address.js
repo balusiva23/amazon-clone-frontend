@@ -5,7 +5,7 @@ import { useStateValue } from "../StateProvider";
 import Navbar from "./Navbar";
 function Address() {
   //const [{}, dispatch] = useStateValue();
-  const [, dispatch] = useStateValue(); // Updated line 7
+  const [stateValue, dispatch] = useStateValue(); // Updated line 7
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [flat, setFlat] = useState("");
@@ -13,7 +13,7 @@ function Address() {
   const [landmark, setLandmark] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
-
+  console.log(stateValue);
   const navigate = useNavigate();
 
   const deliver = (e) => {
